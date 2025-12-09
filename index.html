@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,7 +7,6 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
 
     <style>
         /* * GLOBAL RESET & THEME VARIABLES 
@@ -24,9 +23,7 @@
             --border-light: rgba(255, 255, 255, 0.04);
         }
 
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -43,7 +40,6 @@
             flex-direction: column;
         }
 
-
         .container {
             max-width: 1400px; /* Increased width for better viewing */
             width: 95%;
@@ -54,7 +50,6 @@
             flex-direction: column;
         }
 
-
         /* HEADER LAYOUT */
         header {
             display: flex;
@@ -64,14 +59,12 @@
             margin-bottom: 10px;
         }
 
-
         .brand {
             display: flex;
             align-items: center;
             gap: 12px;
             flex-shrink: 0;
         }
-
 
         .logo-icon {
             width: 48px;
@@ -86,14 +79,12 @@
             color: #2b1207;
         }
 
-
         h1 {
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--gold-1);
             letter-spacing: 0.5px;
         }
-
 
         /* SEARCH BAR */
         .top-search {
@@ -102,7 +93,6 @@
             align-items: center;
             justify-content: flex-end;
         }
-
 
         .search-wrapper {
             width: 100%;
@@ -124,7 +114,6 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
-
         #query {
             flex: 1;
             padding: 12px;
@@ -136,9 +125,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-
         #query::placeholder { color: rgba(255, 255, 255, 0.5); }
-
 
         .search-btn {
             display: flex;
@@ -155,14 +142,12 @@
         }
         .search-btn:active { transform: scale(0.96); }
 
-
         /* MAIN CONTENT & RESULT AREA */
         main {
             flex: 1;
             display: flex;
             flex-direction: column;
         }
-
 
         .result-section {
             display: flex;
@@ -171,14 +156,13 @@
             flex: 1;
         }
 
-
         /* TABS */
         .source-tabs {
             display: flex;
             gap: 10px;
             align-items: center;
+            flex-wrap: wrap; /* Allows wrapping on small screens */
         }
-
 
         .tab-btn {
             padding: 10px 16px;
@@ -192,9 +176,7 @@
             font-size: 0.95rem;
         }
 
-
         .tab-btn:hover { background: rgba(255, 255, 255, 0.06); }
-
 
         .tab-btn.active {
             background: linear-gradient(90deg, #4b2b1a, #b06b35);
@@ -202,7 +184,6 @@
             border-color: rgba(184, 115, 51, 0.5);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-
 
         /* RESULT CONTAINER - UPDATED SIZE */
         .result-container {
@@ -220,7 +201,6 @@
             position: relative;
         }
 
-
         .result-header {
             display: flex;
             align-items: center;
@@ -231,7 +211,6 @@
             height: 60px;
         }
 
-
         .result-title {
             display: flex;
             gap: 10px;
@@ -241,13 +220,11 @@
             font-size: 1.1rem;
         }
 
-
         .result-actions {
             display: flex;
             gap: 10px;
             align-items: center;
         }
-
 
         .action-btn {
             width: 40px;
@@ -263,13 +240,11 @@
             transition: all 0.2s;
         }
 
-
         .action-btn:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
             color: var(--gold-1);
         }
-
 
         /* IFRAME AREA */
         #resultFrame {
@@ -279,7 +254,6 @@
             background: white;
             display: block;
         }
-
 
         /* WELCOME & LOADING STATES */
         .loading-container,
@@ -300,14 +274,12 @@
             z-index: 10;
         }
 
-
         .welcome-icon {
             font-size: 56px;
             color: var(--gold-1);
             margin-bottom: 10px;
             filter: drop-shadow(0 0 15px rgba(255, 211, 126, 0.2));
         }
-
 
         .welcome-screen h2 {
             font-size: 2rem;
@@ -321,7 +293,6 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-
         /* SPINNER */
         @keyframes spin { to { transform: rotate(360deg); } }
         .spinner {
@@ -333,7 +304,6 @@
             animation: spin 0.8s ease-in-out infinite;
         }
 
-
         /* STATS (Bottom Bar) */
         .stats-section {
             display: flex;
@@ -342,7 +312,6 @@
             padding: 15px 0 5px 0;
             flex-wrap: wrap;
         }
-
 
         .stat-box {
             background: rgba(0, 0, 0, 0.2);
@@ -354,13 +323,11 @@
             gap: 10px;
         }
 
-
         .stat-number {
             font-size: 1rem;
             font-weight: 800;
             color: var(--gold-1);
         }
-
 
         .stat-label {
             color: rgba(255, 255, 255, 0.6);
@@ -369,14 +336,12 @@
             letter-spacing: 0.5px;
         }
 
-
         footer {
             margin-top: 10px;
             text-align: center;
             color: rgba(255, 255, 255, 0.4);
             font-size: 0.85rem;
         }
-
 
         /* TOAST NOTIFICATION */
         .toast {
@@ -398,7 +363,6 @@
         }
         @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
-
         /* RESPONSIVE */
         @media (max-width: 900px) {
             header { flex-direction: column; align-items: stretch; }
@@ -406,7 +370,6 @@
             .search-wrapper { max-width: 100%; }
             .result-container { height: 70vh; }
         }
-
 
         /* FIXED: Mobile Search Bar Fix */
         @media (max-width: 600px) {
@@ -419,10 +382,12 @@
             /* Adjust input size */
             #query { font-size: 0.95rem; padding: 10px; }
             .search-wrapper { padding: 4px 6px; }
+            
+            .source-tabs { overflow-x: auto; padding-bottom: 5px; }
+            .tab-btn { white-space: nowrap; }
         }
     </style>
 </head>
-
 
 <body>
     <div class="container">
@@ -442,15 +407,14 @@
             </div>
         </header>
 
-
         <main>
             <section class="result-section">
                 <div class="source-tabs">
                     <button class="tab-btn active" data-source="wikipedia" id="tab-wikipedia">Wikipedia</button>
                     <button class="tab-btn" data-source="wikibooks" id="tab-wikibooks">Wikibooks</button>
+                    <button class="tab-btn" data-source="wikimedia" id="tab-wikimedia">Wikimedia</button>
                     <button class="tab-btn" data-source="archive" id="tab-archive">Internet Archive</button>
                 </div>
-
 
                 <div class="result-container" id="resultContainer">
                     
@@ -459,7 +423,6 @@
                             <i class="fas fa-book-open" style="color:var(--gold-2);"></i>
                             <span id="currentSearch">WikiSearch</span> 
                         </div>
-
 
                         <div class="result-actions">
                             <button class="action-btn" title="Reload Search" id="btnRefresh">
@@ -471,23 +434,19 @@
                         </div>
                     </div>
 
-
                     <div id="loadingIndicator" class="loading-container" style="display:none;">
                         <div class="spinner"></div>
                         <div style="font-weight:500; letter-spacing:1px; color:var(--gold-1);">ACCESSING DATABASE...</div>
                     </div>
 
-
                     <div id="welcomeScreen" class="welcome-screen">
                         <div class="welcome-icon"><i class="fas fa-globe-americas"></i></div>
                         <h2 style="color:var(--gold-1);">Ready to Explore?</h2>
-                        <p>Access millions of articles from Wikipedia, textbooks from Wikibooks, and historical archives instantly.</p>
+                        <p>Access millions of articles from Wikipedia, Wikibooks, Wikimedia Commons, and historical archives instantly.</p>
                     </div>
-
 
                     <iframe id="resultFrame" style="display:none;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
                 </div>
-
 
                 <section class="stats-section">
                     <div class="stat-box">
@@ -506,22 +465,18 @@
             </section>
         </main>
 
-
         <footer>
             © 2025 WikiMatch Enterprise | Engineered for Knowledge by Huzaifa
         </footer>
     </div>
 
-
     <script>
         /*******************************
-         * WikiSearch Professional v2.0
+         * WikiSearch Professional v2.1
+         * - Added Wikimedia Support
          * - PDF Removed
          * - Enhanced UI/UX
-         * - Smart Refresh Logic
-         * - Fixed Title Branding
          *******************************/
-
 
         // DOM Elements
         const queryInput = document.getElementById('query');
@@ -535,15 +490,12 @@
         const btnHome = document.getElementById('btnHome');
         const btnRefresh = document.getElementById('btnRefresh');
 
-
         // State Variables
-        let activeSource = 'wikipedia'; // wikipedia | wikibooks | archive
+        let activeSource = 'wikipedia'; // wikipedia | wikibooks | wikimedia | archive
         let lastBlobUrl = null;
         let lastQuery = '';
 
-
         // --- Event Listeners ---
-
 
         // Search Trigger
         searchBtn.addEventListener('click', () => triggerSearch());
@@ -551,12 +503,10 @@
             if (e.key === 'Enter') triggerSearch(); 
         });
 
-
         // Home Button
         btnHome.addEventListener('click', showWelcomeScreen);
 
-
-        // Fixed Refresh Logic: Actually re-fetches data instead of just reloading src
+        // Fixed Refresh Logic
         btnRefresh.addEventListener('click', () => {
             if (lastQuery) {
                 notify('Refreshing content...', 'info');
@@ -566,14 +516,12 @@
             }
         });
 
-
         // Tab Switching
         tabButtons.forEach(tb => {
             tb.addEventListener('click', () => {
                 // UI Update
                 tabButtons.forEach(b => b.classList.remove('active'));
                 tb.classList.add('active');
-
 
                 // Update State
                 activeSource = tb.dataset.source;
@@ -588,16 +536,13 @@
             });
         });
 
-
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             queryInput.focus();
             showWelcomeScreen();
         });
 
-
         // --- Core Functions ---
-
 
         async function triggerSearch(overrideQuery = null) {
             const raw = overrideQuery || queryInput.value.trim();
@@ -607,17 +552,12 @@
                 return;
             }
 
-
             lastQuery = raw;
             showLoading();
 
-
-            // Set fixed title as requested, but maybe append source in brackets if needed for clarity
-            // User requested "WikiSearch", so we keep it static or subtle.
-            // Let's keep "WikiSearch" main, maybe update icon color based on source?
-            
             try {
-                if (activeSource === 'wikipedia' || activeSource === 'wikibooks') {
+                // Logic updated to include Wikimedia
+                if (activeSource === 'wikipedia' || activeSource === 'wikibooks' || activeSource === 'wikimedia') {
                     await handleWikiSearch(activeSource, raw);
                 } else if (activeSource === 'archive') {
                     handleArchiveSearch(raw);
@@ -629,9 +569,17 @@
             }
         }
 
-
         async function handleWikiSearch(source, query) {
-            const domain = source === 'wikipedia' ? 'en.wikipedia.org' : 'en.wikibooks.org';
+            let domain = '';
+            
+            // Domain selection logic
+            if (source === 'wikipedia') {
+                domain = 'en.wikipedia.org';
+            } else if (source === 'wikibooks') {
+                domain = 'en.wikibooks.org';
+            } else if (source === 'wikimedia') {
+                domain = 'commons.wikimedia.org'; // Points to Wikimedia Commons
+            }
             
             // 1. Get Page Title
             const title = await fetchTopTitle(domain, query);
@@ -641,7 +589,6 @@
                 return;
             }
 
-
             // 2. Fetch HTML
             const html = await fetchPageHtml(domain, title);
             if (!html) {
@@ -650,12 +597,10 @@
                 return;
             }
 
-
             // 3. Process & Display
             const processedHtml = prepareHtml(domain, html);
             renderHtmlBlob(processedHtml);
         }
-
 
         function handleArchiveSearch(query) {
             // Internet Archive Search Embed
@@ -666,7 +611,6 @@
                 lastBlobUrl = null;
             }
 
-
             resultFrame.src = archiveUrl;
             
             // Allow iframe to load
@@ -674,15 +618,13 @@
                 hideLoading();
             };
             
-            // Fallback just in case onload doesn't fire for some cross-origin reasons
+            // Fallback just in case onload doesn't fire
             setTimeout(() => {
                 hideLoading();
             }, 2500);
         }
 
-
         // --- API Helpers ---
-
 
         async function fetchTopTitle(domain, query) {
             const endpoint = `https://${domain}/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&srlimit=1&format=json&origin=*`;
@@ -694,7 +636,6 @@
             return null;
         }
 
-
         async function fetchPageHtml(domain, title) {
             const endpoint = `https://${domain}/api/rest_v1/page/html/${encodeURIComponent(title)}`;
             const resp = await fetch(endpoint, { headers: { 'Accept': 'text/html; charset=utf-8; profile="https://www.mediawiki.org/wiki/Specs/HTML/2.1.0"' } });
@@ -702,16 +643,16 @@
             return null;
         }
 
-
         function prepareHtml(domain, html) {
             const baseTag = `<base href="https://${domain}/">`;
-            // Inject a clean custom style block into the fetched HTML to make it look nicer inside the frame
+            // Inject a clean custom style block into the fetched HTML
             const customStyles = `
                 <style>
                     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 20px; line-height: 1.6; color: #111; }
                     a { color: #b87333; text-decoration: none; }
                     a:hover { text-decoration: underline; }
                     .mw-parser-output { max-width: 100%; }
+                    img { max-width: 100%; height: auto; border-radius: 8px; }
                 </style>
             `;
             
@@ -725,7 +666,6 @@
             }
         }
 
-
         function renderHtmlBlob(htmlContent) {
             if (lastBlobUrl) URL.revokeObjectURL(lastBlobUrl);
             
@@ -736,9 +676,7 @@
             resultFrame.onload = () => hideLoading();
         }
 
-
         // --- UI State Management ---
-
 
         function showLoading() {
             loadingIndicator.style.display = 'flex';
@@ -746,14 +684,12 @@
             welcomeScreen.style.display = 'none';
         }
 
-
         function hideLoading() {
             loadingIndicator.style.display = 'none';
             resultFrame.style.display = 'block';
             welcomeScreen.style.display = 'none';
-            currentSearchLabel.textContent = "WikiMatch"; // Ensures title is always WikiSearch
+            currentSearchLabel.textContent = "WikiMatch"; 
         }
-
 
         function showWelcomeScreen() {
             resultFrame.style.display = 'none';
@@ -764,7 +700,6 @@
             lastQuery = '';
         }
 
-
         function notify(msg, type) {
             const div = document.createElement('div');
             div.className = 'toast';
@@ -774,7 +709,6 @@
             document.body.appendChild(div);
             setTimeout(() => div.remove(), 4000);
         }
-
 
     </script>
 </body>
